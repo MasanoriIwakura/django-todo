@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  {% if todo_list %}
+      <ul>
+      {% for todo in todo_list %}
+          <li><a href="/todo/{{ todo.id }}/">{{ todo.body }}</a></li>
+      {% endfor %}
+      </ul>
+  {% else %}
+      <p>No todo.</p>
+  {% endif %}
+</div>
+</div>
+{% endblock %}

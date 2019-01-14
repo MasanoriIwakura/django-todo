@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if msg %}
+  Message. {{ msg }}
+{% endif %}
+{% if todo %}
+  <div class="row">
+    <div class="col">ID:</div>
+    <div class="col">{{ todo.id }}</div>
+  </div>
+  <div class="row">
+    <div class="col">BODY:</div>
+    <div class="col">{{ todo.body }}</div>
+  </div>
+  <div class="row">
+    <div class="col">UPDATED:</div>
+    <div class="col">{{ todo.updated_at }}</div>
+  </div>
+{% endif %}
+{% endblock %}
